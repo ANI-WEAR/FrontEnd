@@ -1,37 +1,16 @@
 import React, { useState } from 'react'
+import Leftbar from './header/leftbar';
+import Menubar from './header/menubar';
 
 export default function Header() {
     const [isSideOpen, setIsSideOpen] = useState(false);
 
-    const categories = [
-        { ko: '상의', en: 'Top' },
-        { ko: '아우터', en: 'Outer' },
-        { ko: '하의', en: 'Pants' },
-        { ko: '신발', en: 'Shoes' },
-        { ko: '가방', en: 'Bag' },
-        { ko: '모자', en: 'Headwear' },
-    ];
-
     return (
         <div className='flex w-full h-15 border-b border-black'>
             <div className='menu'>
-                <svg className='ml-3 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none" onClick={() => { setIsSideOpen(!isSideOpen) }}>
-                    <path d="M14 49V44.3333H56V49H14ZM14 37.3333V32.6667H56V37.3333H14ZM14 25.6667V21H56V25.6667H14Z" fill="black" />
-                </svg>
+                <Menubar isSideOpen={isSideOpen} setIsSideOpen={setIsSideOpen} />
                 {isSideOpen && (
-                    <div className='w-80 h-[92.5vh] absolute border-r border-black'>
-                        {categories.map((category, index) => (
-                            <div>
-                                <div className='flex p-3 mx-3' key={index}>
-                                    <span className='text-[1.5rem] font-bold self-center'>{category.ko}</span>
-                                    <span className='ml-3 text-[#949494] text-[1.25rem] font-medium self-center'>{category.en}</span>
-                                    <span className='ml-auto text-[2rem] font-semibold self-center'>+</span>
-                                </div>
-                                <div className='w-full h-1 border-b border-[#949494]' />
-                            </div>
-                        ))}
-
-                    </div>
+                    <Leftbar />
                 )}
             </div>
             <div className='w-full'>
