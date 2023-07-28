@@ -1,4 +1,4 @@
-export default function Leftbar() {
+export default function Sidebar() {
     const categories = [
         { ko: '상의', en: 'Top' },
         { ko: '아우터', en: 'Outer' },
@@ -9,7 +9,7 @@ export default function Leftbar() {
     ];
 
     return (
-        <div className='w-80 h-[92.5vh] absolute border-r border-black'>
+        <div className='w-80 h-[92.3vh] absolute top-[4.4rem] border-r border-black'>
             {categories.map((category, index) => (
                 <div>
                     <div className='flex p-3 mx-3' key={index}>

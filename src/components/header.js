@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Leftbar from './header/leftbar';
+import Leftbar from './header/sidebar';
 import Menubar from './header/menubar';
 
 export default function Header() {
