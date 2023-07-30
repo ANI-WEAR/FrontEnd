@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "image": "https://dummyimage.com/300x200/ccc/000&text=Image+1",
+        "title": "Title 1"
+    },
+    {
+        "id": 2,
+        "image": "https://dummyimage.com/300x200/ccc/000&text=Image+2",
+        "title": "Title 2"
+    },
+    {
+        "id": 3,
+        "image": "https://dummyimage.com/300x200/ccc/000&text=Image+3",
+        "title": "Title 3"
+    }
+]

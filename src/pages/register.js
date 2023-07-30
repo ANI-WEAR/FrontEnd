@@ -25,7 +25,6 @@ export default function Register() {
                 <Leftbar />
             )}
             <Basebg>
-
                 <div className='w-72 mt-5 mx-auto'>
                     <span className='text-[1.2rem] font-black self-center items-center'>회원가입</span>
                     <div>

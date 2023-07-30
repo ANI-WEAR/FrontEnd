@@ -4,9 +4,10 @@ import Menubar from './header/menubar';
 
 export default function Header() {
     const [isSideOpen, setIsSideOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     return (
-        <div className='flex w-full h-15 border-b border-black'>
+        <div className='flex w-full h-15 border-b border-black shadow-md'>
             <div className='menu'>
                 <Menubar isSideOpen={isSideOpen} setIsSideOpen={setIsSideOpen} />
                 {isSideOpen && (
@@ -17,7 +18,10 @@ export default function Header() {
                 <h1 className='text-center text-[2.5rem] font-bold'>ANI-WEAR</h1>
             </div>
             <div className='flex ml-auto'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                {isSearchOpen && (
+                    <input className={`w-80 h-14 border border-black rounded-[3px] text-[#686868] text-center text-[23px] font-medium absolute right-40 mt-1.5 transition-all duration-500 ${isSearchOpen ? 'opacity-100' : 'opacity-0'}`} type='text'></input>
+                )}
+                <svg className='z-10 cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none" onClick={() => { setIsSearchOpen(true) }}>
                     <ellipse cx="32.5217" cy="31.5217" rx="12.5217" ry="12.5217" stroke="black" stroke-width="3" />
                     <line x1="41.9302" y1="40.2002" x2="51.6694" y2="49.9393" stroke="black" stroke-width="3" />
                 </svg>

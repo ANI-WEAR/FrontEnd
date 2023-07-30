@@ -9,7 +9,7 @@ export default function Sidebar() {
     ];
 
     return (
-        <div className='w-80 h-[92.3vh] absolute top-[4.4rem] border-r border-black'>
+        <div className='w-80 h-[92.3vh] absolute top-[4.4rem] border-t border-r border-black bg-white z-10'>
             {categories.map((category, index) => (
                 <div>
                     <div className='flex p-3 mx-3' key={index}>
