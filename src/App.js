@@ -7,6 +7,7 @@ import Register from "./pages/register";
 import Find from "./pages/find";
 import Order from "./pages/mypage/order";
 import Cancel from "./pages/mypage/cancel";
+import Member from "./pages/mypage/member";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='/find' element={<Find />} />
           <Route path='/order' element={<Order />} />
           <Route path='/order/cancel' element={<Cancel />} />
+          <Route path="/member" element={<Member />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 
-export default function History() {
+export default function Histitle() {
     const [currentUrl, setCurrentUrl] = useState('');
 
     const location = useLocation();
@@ -17,13 +17,7 @@ export default function History() {
                 <a href="/order/cancel" className={`${currentUrl === '/order/cancel' ? 'text-[#507C4E] font-bold' : 'text-[#5B5B5B]'}`}>반품 내역</a>
                 <a href="/member" className={`${currentUrl === '/member' ? 'text-[#507C4E] font-bold' : 'text-[#5B5B5B]'}`}>회원정보 수정</a>
             </div >
-            <div className="w-full h-9 bg-[#D9D9D9] flex p-2 text-[0.75rem] font-normal mt-5 font-sans text-center">
-                <span className="w-52">주문일/주문번호</span>
-                <span className="w-60">상품정보/옵션정보</span>
-                <span className="ml-auto w-60">결제금액</span>
-                <span className="w-60">주문상태</span>
-                <span className="w-60">취소/반품</span>
-            </div>
-        </div >
+            <div className="w-full h-1 bg-[#D9D9D9] mt-5 " />
+        </div>
     )
 }

@@ -14,8 +14,8 @@ export default function Header() {
                     <Leftbar />
                 )}
             </div>
-            <div className='w-full'>
-                <h1 className='text-center text-[2.5rem] font-bold'>ANI-WEAR</h1>
+            <div className='w-full flex'>
+                <a href='/' className='self-center text-[2.5rem] mx-auto font-bold'>ANI-WEAR</a>
             </div>
             <div className='flex ml-auto'>
                 {isSearchOpen && (
